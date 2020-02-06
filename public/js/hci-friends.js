@@ -5,12 +5,21 @@ $(document).ready(function() {
 	initializePage();
 })
 
+console.log('hehe');
+$(document).on('click', '.nameClick',function(event) {
+	event.preventDefault();
+	console.log("entered");
+	var name = $(this).text();
+	$(this).text(anagrammedName(name));
+  })
 /*
  * Function that is called when the document is ready.
  */
 function initializePage() {
 	console.log("Javascript connected!");
 }
+
+
 
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
